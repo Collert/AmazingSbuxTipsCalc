@@ -45,7 +45,7 @@ def entry():
             else:
                 partners.append(f"Person {person}")
         for person in partners:
-            time = request.form.get(person)
+            time = float(request.form.get(person))
             if time:
                 hours[person] = time
                 total_hours += time
